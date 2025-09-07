@@ -4,11 +4,13 @@
 [Grasp Pose Generator](https://github.com/atenpas/gpg.git) is a cpp package that creat grasp candidates for 3D point clouds.
 This package binding it with python.
 
-## Install
+## Install in conda environment
 
 ```bash
+conda install -c conda-forge pcl cmake boost
 ./build_pygpg.sh
 ```
+- Note, if the conda failed to find the correct package to install, you can try installing [mamba](https://github.com/conda-forge/miniforge) and using mamba to install the dependencies: `mamba install pcl cmake boost`
 
 ## Example:
 ```python
@@ -30,6 +32,13 @@ for grasp in grasps:
     pose[:3, 3] = grasp.get_grasp_bottom()
     pose_list.append(pose)
 ```
+
+## Demo with a simple box:
+```bash
+python example/example.py
+```
+Press `R` to see the result:
+![](data/screenshot_demo.png)
 
 ## Citation
 If you found pyGPG useful in your research, please consider citing:
