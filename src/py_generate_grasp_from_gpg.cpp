@@ -99,6 +99,7 @@ PYBIND11_MODULE(pygpg, m) {
             .def("get_grasp_axis", &Grasp::getAxis, "get grasp axis")
             .def("get_grasp_width", &Grasp::getGraspWidth, "get grasp width")
             .def("get_score", &Grasp::getScore, "get grasp score")
+            .def("get_sample", &Grasp::getSample, "get grasp sample")
             .def("is_full_antipodal", &Grasp::isFullAntipodal, "get whether grasp is antipodal")
             .def("is_half_antipodal", &Grasp::isHalfAntipodal, "get whether grasp is indeterminate")
       ;
